@@ -1,0 +1,59 @@
+{
+  "name": "review-expense-receipt-evidence-auditor",
+  "description": "Run Expense Receipt Evidence Auditor",
+  "version": "0.1.0",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "payload": {
+        "type": "object",
+        "properties": {
+          "expense_items": {
+            "type": "array",
+            "description": "expense items"
+          },
+          "receipts": {
+            "type": "array",
+            "description": "receipts"
+          },
+          "business_purpose": {
+            "type": "string",
+            "description": "business purpose"
+          },
+          "policy_version": {
+            "type": "string",
+            "description": "policy version"
+          }
+        },
+        "required": [
+          "expense_items",
+          "receipts",
+          "business_purpose",
+          "policy_version"
+        ]
+      }
+    },
+    "required": [
+      "payload"
+    ]
+  },
+  "output_schema": {
+    "type": "object",
+    "properties": {
+      "status": {
+        "type": "string"
+      },
+      "score": {
+        "type": "object"
+      },
+      "findings": {
+        "type": "array"
+      }
+    }
+  },
+  "implementation": {
+    "type": "script",
+    "path": "review-expense-receipt-evidence-auditor.py",
+    "runtime": "python3"
+  }
+}

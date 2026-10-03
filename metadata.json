@@ -1,0 +1,29 @@
+{
+  "slug": "expense-receipt-evidence-auditor",
+  "title": "Expense Receipt Evidence Auditor",
+  "category": "finance",
+  "description": "Check expense claims for receipt evidence, purpose, date, and policy references.",
+  "fields": {
+    "expense_items": {
+      "label": "expense items",
+      "kind": "list",
+      "minimum": 1
+    },
+    "receipts": {
+      "label": "receipts",
+      "kind": "list",
+      "minimum": 1
+    },
+    "business_purpose": {
+      "label": "business purpose",
+      "kind": "required",
+      "minimum": 0
+    },
+    "policy_version": {
+      "label": "policy version",
+      "kind": "required",
+      "minimum": 0
+    }
+  },
+  "limitations": "Uses caller-provided evidence only; cannot confirm external facts. Human review remains required."
+}

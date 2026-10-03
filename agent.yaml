@@ -1,0 +1,11 @@
+spec_version: "0.1.0"
+name: expense-receipt-evidence-auditor
+version: 0.1.0
+description: Check expense claims for receipt evidence, purpose, date, and policy references.
+skills:
+  - expense-receipt-evidence-auditor-skill
+tools:
+  - review-expense-receipt-evidence-auditor
+tags:
+  - finance
+  - evidence-driven
